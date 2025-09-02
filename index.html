@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFM Website</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+  <!-- Model Viewer library -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Cutive Mono', monospace;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 1rem;
+      margin-top: 20px;
+      text-transform: none; /* lowercase */
+      color: black;
+    }
+
+    model-viewer {
+      width: 80vw;           /* responsive width */
+      max-width: 600px;      /* prevents cropping on large screens */
+      height: auto;
+      aspect-ratio: 1 / 1;   /* keeps pen square */
+      background-color: transparent; /* transparent panel */
+      margin: 20px 0;
+    }
+
+    a {
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #0077cc;
+      font-size: 1.2rem;
+      font-family: 'Cutive Mono', monospace;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Title -->
+  <h1>reuben fox mcclure</h1>
+
+  <!-- 3D pen Model -->
+  <model-viewer
+    src="pen.glb"
+    alt="3D pen"
+    auto-rotate
+disable-pan
+Disable-zoom
+    rotation-per-second="30deg"
+    camera-controls
+    environment-image="neutral">
+</model-viewer>
+
+  <!-- Placeholder hyperlink -->
+  <a href="#">more words soon</a>
+
+</body>
+</html>
